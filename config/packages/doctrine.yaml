@@ -18,12 +18,12 @@ doctrine:
             Doctrine\DBAL\Platforms\PostgreSQLPlatform: identity
         auto_mapping: true
         mappings:
-            App:
+            AriAuthBundle:
                 type: attribute
                 is_bundle: false
                 dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'App\Entity'
-                alias: App
+                prefix: 'AriAuthBundle\Entity'
+                alias: AriAuthBundle
         controller_resolver:
             auto_mapping: false
 
@@ -49,6 +49,6 @@ when@prod:
         cache:
             pools:
                 doctrine.result_cache_pool:
-                    adapter: cache.app
+                    adapter: cache.AriAuthBundle
                 doctrine.system_cache_pool:
                     adapter: cache.system
